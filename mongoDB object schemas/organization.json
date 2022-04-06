@@ -1,0 +1,30 @@
+{
+    "_id": "organizationID",
+    "name": "organization name",
+    "organizationRules": "organization rules",
+    "adminsList": [
+        "user1ID",
+        "user2ID",
+        "user3ID"
+    ],
+    "raidmakersList":[
+        "user1ID",
+        "user2ID",
+        "user3ID"
+    ],
+    "membersList":[
+        "user1ID",
+        "user2ID",
+        "user3ID"
+    ],
+    "raidList":[
+        "raidID1",
+        "raidID2",
+        "raidID3"
+    ],
+    "bannedMembersList":[
+        "user1ID",
+        "user2ID",
+        "user3ID"
+    ]
+}

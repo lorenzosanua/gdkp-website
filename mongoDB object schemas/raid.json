@@ -1,0 +1,27 @@
+{
+    "_id":"raidID",
+    "raidLocation": "raid location",
+    "raidTimeDate": "raid time and date",
+    "raidHost": "userID",
+    "raidOrganization": "organizationID",
+    "raidNotes": "raid notes",
+    "raidCompleted": "true or false",
+    "raidPot": "raid total pot",
+    "raidExpenses": "raid expenses",
+    "raidPaidMembers": "number of paid members",
+    "raidAppliedCharacters": [
+        "character1ID",
+        "character2ID",
+        "character3ID"
+    ],
+    "raidApprovedCharacters": [
+        "character1ID",
+        "character2ID",
+        "character3ID"
+    ],
+    "raidConfirmedCharacters":[
+        "character1ID",
+        "character2ID",
+        "character3ID"
+    ]
+}

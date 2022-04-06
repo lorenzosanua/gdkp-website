@@ -1,0 +1,16 @@
+{
+    "_id": "discordID", 
+    "username": "username#1234",
+    "email": "email from discord",
+    "role": "user or admin",
+    "characters": [
+        "char1ID",
+        "char2ID",
+        "char3ID"
+    ],
+    "organizations": [
+        "organization1ID",
+        "organization2ID",
+        "organization3ID"
+    ]
+}

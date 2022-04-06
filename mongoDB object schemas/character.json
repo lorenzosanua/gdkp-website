@@ -1,0 +1,22 @@
+{
+    "_id": "characterID",
+    "characterName": "character name",
+    "characterServer": "character server",
+    "warcraftlogsLink": "WCL link",
+    "gearLink": "gear link",
+    "raidsAppliedTo": [
+        "raidID1",
+        "raidID2",
+        "raidID3"
+    ],
+    "raidsApprovedTo":[
+        "raidID1",
+        "raidID2",
+        "raidID3"
+    ],
+    "raidsConfirmedTo":[
+        "raidID1",
+        "raidID2",
+        "raidID3"
+    ]
+}
