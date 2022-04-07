@@ -5,7 +5,12 @@ const userSchema = mongoose.Schema({
     username: String,
     email: String,
     role: String,
-    characters: [String],
+    characters: [{
+        charName: String,
+        charClass: String,
+        charSpec: String,
+        _id: String,
+    }],
     organizations: [String]
 }, {
     timestamps: true,

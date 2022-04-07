@@ -10,9 +10,24 @@ const raidSchema = mongoose.Schema({
     raidPot: Number,
     raidExpenses: Number,
     raidPaidMembers: Number,
-    raidAppliedCharacters: [String],
-    raidApprovedCharacters: [String],
-    raidConfirmedCharacters: [String]
+    raidAppliedCharacters: [{
+        charName: String,
+        charClass: String,
+        charSpec: String,
+        charID: String
+    }],
+    raidApprovedCharacters: [{
+        charName: String,
+        charClass: String,
+        charSpec: String,
+        charID: String
+    }],
+    raidConfirmedCharacters: [{
+        charName: String,
+        charClass: String,
+        charSpec: String,
+        charID: String
+    }]
 }, {
     timestamps: true,
 })

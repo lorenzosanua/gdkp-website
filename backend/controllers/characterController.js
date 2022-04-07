@@ -27,7 +27,12 @@ const setCharacter = asyncHandler(async (req,res) => {
     })
     const updatedUser = await User.findByIdAndUpdate(req.body.userID, {
         $push: {
-            characters: character._id
+            characters: {
+                charName: character.characterName,
+                charClass: character.characterClass,
+                charSpec: character.characterSpec,
+                _id: character._id,
+            }
         }
     });
 
@@ -61,9 +66,7 @@ const deleteCharacter = asyncHandler(async (req, res) => {
 
     const deletedCharacter = await Character.findByIdAndRemove(req.params.id)
     const updatedUser = await User.findByIdAndUpdate(req.body.userID, {
-        $pull: {
-            characters: character._id
-        }
+        $pull: { characters: { _id: req.params.id }}
     });
 
     
