@@ -24,6 +24,7 @@ const setCharacter = asyncHandler(async (req,res) => {
         warcraftLogsLink: req.body.warcraftLogsLink,
         gearLink: req.body.gearLink,
         characterNotes: req.body.characterNotes,
+        characterOwner: req.body.userID,
     })
     const updatedUser = await User.findByIdAndUpdate(req.body.userID, {
         $push: {
@@ -64,8 +65,8 @@ const deleteCharacter = asyncHandler(async (req, res) => {
         throw new Error('character not found, wrong ID')
     }
 
-    const deletedCharacter = await Character.findByIdAndRemove(req.params.id)
-    const updatedUser = await User.findByIdAndUpdate(req.body.userID, {
+    const deletedCharacter = await Character.findByIdAndRemove(req.params.id) //remove character from character collection
+    const updatedUser = await User.findByIdAndUpdate(req.body.userID, { //delete the character from the user's characters
         $pull: { characters: { _id: req.params.id }}
     });
 

@@ -1,6 +1,7 @@
 const asyncHandler = require('express-async-handler')
 
 const User = require('../models/userModel')
+const Character = require('../models/characterModel')
 
 //GET /api/user/:id
 const getUser = asyncHandler(async (req,res) => {
@@ -50,7 +51,10 @@ const deleteUser = asyncHandler(async (req, res) => {
         throw new Error('user not found, wrong ID')
     }
 
+    //delete the user
     const deletedUser = await User.findByIdAndRemove(req.params.id)
+    //delete all characters linked with the owner
+    const deletedUsersCharacters = await Character.deleteMany({characterOwner: deletedUser._id})
     
     res.json(deletedUser)
 })

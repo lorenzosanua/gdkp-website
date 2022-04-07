@@ -7,6 +7,7 @@ const characterSchema = mongoose.Schema({
     characterServer: String,
     warcraftLogsLink: String,
     gearLink: String,
+    characterOwner: String, 
     raidsAppliedTo: [String],
     raidsApprovedTo: [String],
     raidsConfirmedTo: [String],
